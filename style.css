@@ -1,0 +1,325 @@
+/* Reset de margens, paddings e fontes */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+}
+
+body {
+   background-color: #f4f4f4;
+}
+
+/* Imagem Clubes */
+.clubes {
+   background-color: #000;
+}
+
+/* Menu */
+.menu {
+   background-color: #3d0d66;
+   color: white;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px;
+   height: 100px;
+   position: relative;
+   z-index: 2;
+}
+
+.logo img {
+   width: 100px;
+}
+
+.nav-bar {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.nav-list {
+   align-items: center;
+}
+
+nav ul {
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+nav ul li {
+   margin: 0 15px;
+}
+
+nav ul li a {
+   color: white;
+   text-decoration: none;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+   cursor: pointer;
+   display: none;
+   margin-bottom: 50px;
+}
+
+.mobile-menu div {
+   width: 32px;
+   height: 2px;
+   background: #fff;
+   margin: 8px;
+}
+
+/* Formulário de busca */
+.form-inline .form-control {
+   background-color: transparent;
+   border: 1px solid #ccc;
+   border-radius: 25px;
+   color: #333;
+   padding-left: 15px;
+   font-size: 16px;
+}
+
+button {
+   background: none;
+   border: none;
+}
+
+button i.search {
+   background-color: #8609f3;
+   border-radius: 50%;
+   padding: 10px;
+   color: #f4f4f4;
+   font-size: 16px;
+}
+
+.search-container {
+   position: relative;
+}
+
+/* Banner */
+#banner {
+   position: relative;
+}
+
+.banner-item img {
+   width: 100%;
+   height: auto;
+}
+
+.banner-text {
+   position: absolute;
+   top: 50%;
+   left: 20px;
+   width: 80%;
+   text-align: left;
+   z-index: 2;
+   color: white;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+   font-size: 1em;
+}
+
+/* Seção de Notícias */
+.news {
+   background: white;
+   padding: 20px;
+   text-align: center;
+   color: #8609f3;
+}
+
+.news-container {
+   display: flex;
+   justify-content: center;
+   gap: 20px;
+   flex-wrap: wrap;
+}
+
+.card {
+   margin: 10px;
+   width: 18rem;
+}
+
+.card-img-top {
+   width: 100%;
+}
+
+/* Seção de Estatísticas */
+.stats {
+   display: flex;
+   justify-content: center;
+   background: #3d0d66;
+   color: white;
+   padding: 20px;
+}
+
+.stat {
+   text-align: center;
+   margin: 0 20px;
+}
+
+/* Seção CTA */
+.cta {
+   text-align: center;
+   padding: 30px;
+   color: #8609f3;
+   font-size: 30px;
+}
+
+.cta button {
+   background-color: #8609f3;
+   color: #f4f4f4;
+   padding: 10px 30px;
+   margin: 10px;
+   border: none;
+   cursor: pointer;
+   border-radius: 10px;
+}
+
+#register {
+   background-color: rgb(247, 247, 56);
+   color: #000;
+}
+
+/* Footer */
+footer {
+   background: #222;
+   color: white;
+   text-align: center;
+   padding: 20px;
+}
+
+.footer {
+   padding: 30px 0;
+   text-align: left;
+}
+
+.footer .row {
+   display: flex;
+   align-items: center;
+}
+
+.footer-logo {
+   width: 100px;
+   height: auto;
+}
+
+.footer-content {
+   padding: 10px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+   body {
+      overflow-x: hidden;
+   }
+
+   .banner{
+      display: none;
+   }
+   .menu {
+      flex-wrap: wrap;
+   }
+
+   .nav-list {
+      position: absolute;
+      top: 8vh;
+      right: 0;
+      width: 50vw;
+      height: 92vh;
+      background: #8609f3;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      transform: translateX(100%);
+   }
+
+   .nav-list li {
+      margin-left: 0;
+      opacity: 0;
+   }
+
+   .nav-list.active {
+      transform: translateX(0);
+   }
+
+   .mobile-menu {
+      display: block;
+      margin-left: auto;
+   }
+
+   nav .options, .search-container {
+      display: none;
+   }
+
+   .news-container {
+      flex-direction: row;
+      justify-content: space-around;
+   }
+
+   .cta button {
+      font-size: 1.2rem;
+   }
+}
+
+@media (max-width: 667px) {
+   nav ul {
+      flex-direction: column;
+      padding: 0;
+   }
+
+   nav ul li {
+      margin: 10px 0;
+   }
+
+   .news-container {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .card {
+      width: 90%;
+      margin-bottom: 20px;
+   }
+
+   .stats {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .stat h3 {
+      font-size: 1.5rem;
+   }
+
+   .banner {
+      display: none;
+   }
+
+   .cta button {
+      font-size: 1.1rem;
+   }
+}
+
+@keyframes navLinkFade {
+   from {
+     opacity: 0;
+     transform: translateX(50px);
+   }
+   to {
+     opacity: 1;
+     transform: translateX(0);
+   }
+ }
+ 
+ .mobile-menu.active .line1 {
+   transform: rotate(-45deg) translate(-8px, 8px);
+ }
+ 
+ .mobile-menu.active .line2 {
+   opacity: 0;
+ }
+ 
+ .mobile-menu.active .line3 {
+   transform: rotate(45deg) translate(-5px, -7px);
+ }
